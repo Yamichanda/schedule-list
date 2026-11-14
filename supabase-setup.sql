@@ -41,3 +41,4 @@ $$;
 revoke all on function public.shiori_save(bigint,jsonb,jsonb) from public,anon;
 grant execute on function public.shiori_save(bigint,jsonb,jsonb) to authenticated;
 commit;
+

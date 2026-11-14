@@ -86,3 +86,4 @@ if(window.supabase){
  setInterval(refreshCloud,15000);window.addEventListener('focus',refreshCloud);window.addEventListener('online',refreshCloud);document.addEventListener('visibilitychange',refreshCloud);$('dialog').addEventListener('close',refreshCloud);
 }else syncStatus('この端末のみ保存・同期機能を読み込めません');
 syncUi();
+

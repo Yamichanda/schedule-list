@@ -24,3 +24,4 @@ a.storage.set('shiori-events',JSON.stringify([event]));a.storage.set('shiori-tem
 await a.run('switchAccount(null)');assert.equal(a.run('cloud'),false);assert.equal(a.run('events[0].title'),'同期テスト');await a.login('other');assert.equal(a.run('events.length'),0);assert.equal(a.run('templates.length'),0);
 const sql=fs.readFileSync('supabase-setup.sql','utf8');assert(sql.includes('enable row level security'));assert(sql.includes('security invoker'));assert(sql.includes('where user_id=uid and revision=p_revision'));assert(sql.includes('from public,anon'));assert(!fs.readFileSync('supabase-sync.js','utf8').includes('sb_secret_'));
 console.log('PASS: two-device load/save, stale-write conflict, templates, failed writes, deletion, explicit local migration/deduplication, logout/account isolation. SQL reviewed statically; live Supabase not configured/tested.');
+
